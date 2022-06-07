@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+    
+</body>
+
+<script>
+
+    //Question - Program to find the second largest number in a given input array and replace it with a given number/string.
+    // [1,4,3,5,8,11,5,7]
+    //o/p [1,4,3,5,"Hello",11,5,7]
+
+
+    // let arr = [1,4,3,5,8,11,5,7];
+    // let largest = 0;
+    // let second_largest = 0;
+    
+    // for(i=0; i<arr.length; i++) {
+    //     if(arr[i]>largest) {
+    //         largest = arr[i]
+    //     }
+    // }
+    // console.log(largest);
+
+    // for(i=0; i<arr.length; i++) {
+    //     if(arr[i]>second_largest && arr[i]<largest) {
+    //         second_largest = arr[i]
+    //     }
+    // }
+    // console.log(second_largest, arr.indexOf(second_largest));
+
+    // arr.splice(arr.indexOf(second_largest), 1, "Hello")
+    // console.log("New Array", arr);
+
+// Using Function
+
+const second_largest_no = (arr, newval) => {
+    let largest = 0;
+    let second_largest = 0;
+
+    for(i=0; i<arr.length; i++) {
+        if(arr[i]>largest) {
+            largest = arr[i]
+        }
+    }
+
+    for(i=0; i<arr.length; i++) {
+        if(arr[i]>second_largest && arr[i]<largest) {
+            second_largest = arr[i]
+        }
+    }
+
+    console.log(second_largest, arr.indexOf(second_largest));
+    arr.splice(arr.indexOf(second_largest), 1, newval);
+    console.log("New Array", arr);
+}
+
+second_largest_no([1,4,3,5,8,11,5,79,85,56], "New Number");
+
+
+</script>
+
+
+</html>
