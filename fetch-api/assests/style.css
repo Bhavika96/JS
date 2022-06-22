@@ -1,0 +1,28 @@
+body {
+    margin:0;
+    padding: 0;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1440px;
+    padding: 0 15px;
+}
+
+.card-block .card-row {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card-box {
+    max-width: 300px;
+}
+
+.card-box img {
+    object-fit: cover;
+    width: 310px;
+    height: auto;
+}
