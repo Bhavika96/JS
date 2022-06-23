@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+    
+</body>
+
+<script>
+    // Prime nos - 1,2,3,5,7,11,17,19
+    //To check if given number is prime or not
+    //Logic - if the number gives remainder 0, when divided by itself & 1 and no other number
+
+
+
+let is_prime = (num) => {
+    if(num===1) {
+        return "Nor Prime Nor composite"
+    } else if(num>1) {
+        for(let i=2; i<num; i++ ) {
+        if(num%i == 0) {
+            return "This is not a prime number";
+        }
+    }
+        return "This is prime number";
+    }
+    else {
+        return "Not a prime number";
+    }
+    
+    }
+
+    console.log(is_prime(25));
+    console.log(is_prime(13));
+    console.log(is_prime(1));
+    console.log(is_prime(2));
+    console.log(is_prime(24));
+    console.log(is_prime(47));
+    console.log(is_prime(0));
+    console.log(is_prime(-5));
+
+
+
+</script>
+</html>
