@@ -13,7 +13,7 @@
 <script>
 
 
-//Remove Duplicate characters from array of element and find the count of an elements using set
+// Remove Duplicate characters from array of element and find the count of an elements using set
 
     let arr = [1,2,2,3,1,3,2,5,6,3,4,3,4,5];
     let newArr= [];
@@ -39,11 +39,47 @@
 
 // Using SET - Set gives the unique value in an array
 
-let arr2 =  [1,2,2,3,1,3,2,5,6,3,4,3,4,5];
-let unique = [...new Set(arr2)];
-console.log(unique);
-console.log(unique.length);
+    let arr2 =  [1,2,2,3,1,3,2,5,6,3,4,3,4,5];
+    let unique = [...new Set(arr2)];
+    console.log(unique);
+    console.log(unique.length);
 
 
+//Using filter
+
+    const duplicates = arr.filter((item, index) => {
+        if(arr.indexOf(item)===index) {
+            return item;
+        }
+    })
+    console.log("duplicates",duplicates)
+
+
+
+// Duplicate from a string
+
+let str = "aabcddabcfdd"
+let newStr = ""
+
+for(let a=0; a<str.length; a++) {
+    if(newStr.indexOf(str[a]) < 0) {
+        newStr = newStr + str[a]
+    }
+}
+console.log(newStr);
+
+// Using Filter
+let str1 = "aadeffrdder"
+str1 = str1.split("");
+console.log("str1",str1)
+const duplicate_string = str1.filter((item, index) => {
+    if(str1.indexOf(item) === index) {
+        return item;
+    }
+})
+let result = duplicate_string
+console.log(result);
+result = result.join("");
+console.log(result)
 </script>
 </html>
