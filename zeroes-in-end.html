@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+
+//Using Swapping
+
+    let arr = [1,2,0,0,2,1,0]
+    let temp;
+
+    for(let i=0; i<arr.length; i++) {
+        for(j=1+i; j<arr.length; j++) {
+            if(arr[i]===0) {
+                if(arr[i]<arr[j]) {
+                temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
+                }
+            }
+            
+        }
+    }
+    console.log(arr);
+
+
+// Using splice
+        let a = [1, 2, 0, 0, 2, 1, 0]
+            let count = 0;
+
+            for (let k = 0; k <= a.length; k++) {
+                if (a[k] === 0) {
+                    a.splice(k, 1);
+                    count++;
+                    k = k - 1;
+                }
+            }
+            for (let m = 0; m < count; m++) {
+                a.push(0);
+            }
+            console.log(a)
+            console.log(count);
+
+
+// Using filter 
+//syntax of filter
+// let arr1 = [1, 2, 0, 0, 2, 1, 0]
+
+// const zeroes = arr1.filter(item => {
+//     if(item === 0) {
+//         return arr1.push(item);
+//     }
+// })
+// console.log(zeroes);
+
+
+</script>
+</html>
