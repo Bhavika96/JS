@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+//Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target
+
+// let nums = [2,3,7,11,15]
+// let target = 9;
+
+var twoSum = function(nums, target) {
+    for(let i=0; i<nums.length; i++) {
+        for(let j=i+1; j<nums.length; j++ ) {
+            if(nums[i] + nums[j] == target) {
+                 console.log(nums[i], nums[j]);
+                 return [i,j];
+                // console.log(indexOf(nums[i]), indexOf(nums[j]));
+                break;
+            }
+        }
+    }
+};
+console.log(twoSum([2,3,7,11,15],9))
+
+    
+
+</script>
+
+
+</html>
