@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+    //Uppercase of each first letter of a words
+    let str = "my name is bhavika"
+    str = str.split(" ");
+    
+
+    for(let i=0; i<str.length; i++) {
+        // console.log(str[i][0])
+        str[i] = str[i][0].toUpperCase() + str[i].substr(1)       //substring/substr adds the remaining string or to take out a part from the string
+    }
+    // str = str.join(" ")
+    console.log(str);
+
+
+    //using slice
+    for(let j=0; j<str.length; j++) {
+        str[j] = str[j][0].toUpperCase() + str[j].slice(1)      
+    }
+    str = str.join(" ")
+    console.log(str);
+
+
+
+    //Using map function
+    const uppercase = str.map((item) => {
+       let result =  item[0].toUpperCase + item.substr(1);
+       console.log(result)
+       return result;
+    })
+
+    console.log(uppercase)
+
+
+
+
+</script>
+
+</html>
