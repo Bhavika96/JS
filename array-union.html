@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+</head>
+<body>
+    
+</body>
+
+
+<script>
+    //To find unique values from 2 arrays and keep into one array. i.e. Union.
+
+    // Array UNION
+
+    let a = ["Apple", "Mango", "Orange", "Banana"]
+    let b = ["Mango", "Pineapple", "Orange"]
+
+    let newArr = [...a, ...b]
+    console.log(newArr);
+    
+
+// USing Loop
+    let abc = []
+    for(let i=0; i<newArr.length; i++) {
+        if(abc.indexOf(newArr[i]) < 0) {
+            abc.push(newArr[i]);
+        }
+    }
+    console.log("Union",abc);
+
+
+// Using filter
+    const union = newArr.filter((item, index)=>{
+        if(newArr.indexOf(item) === index) {
+            return item;
+        }
+    })
+console.log("Union",union);
+
+
+// Common elements from an array
+
+    // o/p = ["Mango", "Orange"]
+
+    let c = []
+    for(let i =0; i<a.length; i++) {
+        for(let j=0; j<b.length; j++) {
+            if(a[i]==b[j]) {
+                c.push(a[i]);
+            }
+        }
+    }
+    console.log("Common Elements",c);
+
+
+// Difference
+
+
+
+</script>
+
+</html>
