@@ -51,15 +51,18 @@
 
 
 // Using filter 
-//syntax of filter
-// let arr1 = [1, 2, 0, 0, 2, 1, 0]
+// syntax of filter
+let arr1 = [1, 2, 0, 0, 2, 1, 0]
+let newArr = [];
 
-// const zeroes = arr1.filter(item => {
-//     if(item === 0) {
-//         return arr1.push(item);
-//     }
-// })
-// console.log(zeroes);
+const numbers = arr1.filter(item => {
+    if(item === 0) {
+        newArr.push(item);
+        return false;
+    } 
+        return true;
+})
+console.log("Filter Method",numbers,arr1,newArr,[...numbers,...newArr]);
 
 
 </script>
